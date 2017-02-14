@@ -1,5 +1,5 @@
 # Wkhtmltopdf Docker image
 
-## Usage
+## Usage example
 
-docker run --rm -v `pwd`:/data michaelperrin/wkhtmltopdf http://www.ecoguide-it.com/fr/ /data
+    docker run --rm -v `pwd`:/data michaelperrin/wkhtmltopdf http://www.ecoguide-it.com/fr/ /data/test.pdf
