@@ -12,7 +12,6 @@ RUN apt-get update \
         xz-utils
 
 RUN curl "http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz" -L -o "wkhtmltopdf.tar.xz"
-RUN ls
 RUN tar Jxvf wkhtmltopdf.tar.xz
 RUN mv wkhtmltox/bin/wkhtmltopdf /usr/local/bin/wkhtmltopdf
 
