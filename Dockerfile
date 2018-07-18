@@ -1,8 +1,6 @@
 FROM debian:jessie
 LABEL maintainer "Michaël Perrin <contact@michaelperrin.fr>"
 
-#docker run --rm -v `pwd`:/data my_wkhtmltopdf http://www.ecoguide-it.com/fr/
-
 RUN apt-get update \
     && apt-get install -y \
         curl \
