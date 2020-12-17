@@ -1,16 +1,17 @@
-FROM debian:jessie
-LABEL maintainer "Michaël Perrin <contact@michaelperrin.fr>"
+FROM debian:buster
 
 RUN apt-get update \
     && apt-get install -y \
         curl \
         libxrender1 \
-        libfontconfig \
+        libjpeg62-turbo \
+        fontconfig \
         libxtst6 \
+        xfonts-75dpi \
+        xfonts-base \
         xz-utils
 
-RUN curl "https://downloads.wkhtmltopdf.org/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz" -L -o "wkhtmltopdf.tar.xz"
-RUN tar Jxvf wkhtmltopdf.tar.xz
-RUN mv wkhtmltox/bin/wkhtmltopdf /usr/local/bin/wkhtmltopdf
+RUN curl "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_amd64.deb" -L -o "wkhtmltopdf.deb"
+RUN dpkg -i wkhtmltopdf.deb
 
 ENTRYPOINT ["wkhtmltopdf"]
