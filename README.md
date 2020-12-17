@@ -5,7 +5,7 @@
     docker run --rm -v `pwd`:/data michaelperrin/wkhtmltopdf \
         --viewport-size 1280x1024 \
         --page-size A4 \
-        http://www.ecoguide-it.com/fr/ \
+        http://example.com \
         /data/test.pdf
 
 ### Using Docker Compose
@@ -23,5 +23,5 @@ Run:
     docker-compose run --rm wkhtmltopdf \
         --viewport-size 1280x1024 \
         --page-size A4 \
-        http://www.ecoguide-it.com/fr/ \
+        http://example.com \
         /data/test.pdf
